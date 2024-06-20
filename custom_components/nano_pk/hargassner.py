@@ -3,6 +3,13 @@
 Created on Wed Mar  3 22:22:58 2021
 
 @author: Tobias
+
+update:  thanks to @skrue for his code to make the connection handling more robust
+
+Suggestion: The safest way to correctly identify the message format is probably the 
+SD card method. Therefore: if it does not work using the simple method using firmware 
+information, you should use the SD card
+
 """
 
 import asyncio
@@ -192,12 +199,18 @@ class HargassnerBridge(Entity):
             self._infoLog += "HargassnerBridge._update(): Opening connection...\n"
             try:
                 if self._writer:
-                    self._writer.close()
-                    await self._writer.wait_closed()
+                    try:
+                        self._writer.close()
+                        await self._writer.wait_closed()
+                    except Exception as e:
+                        self._errorLog += "HargassnerBridge.async_update(): Error closing writer (" + repr(e) + ")\n"
+                    finally:
+                        self._reader = None
+                        self._writer = None
                 self._reader, self._writer = await asyncio.wait_for(asyncio.open_connection(self._hostIP, 23), timeout=BRIDGE_TIMEOUT)
                 self._connectionOK = True
-            except Exception:
-                self._errorLog += "HargassnerBridge.async_update(): Error opening connection\n"
+            except Exception as e:
+                self._errorLog += "HargassnerBridge.async_update(): Error opening connection (" + repr(e) + ")\n"
     
     @property
     def name(self) -> str:
