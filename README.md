@@ -34,6 +34,8 @@ nano_pk:
 
 
 ### How to use with other Hargassner models or different firmware versions ###
+### or if you can't get it to work with the above way (save way) ###
+
 Apart from the provided templates for `msgformat` (see above), this configuration parameter also allows custom message formats. Follow these steps:
 1. To get the correct message format for your heating, enable SD logging on the touch screen and insert a card for a short time (a couple of seconds should be enough). 
 2. Check the card on your computer: you should find a file `DAQ00000.DAQ` or similar somewhere.
