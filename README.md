@@ -43,7 +43,7 @@ Apart from the provided templates for `msgformat` (see above), this configuratio
 4. Copy the entire section and place it using quotes in your `configuration.yaml`, so that you have something like this: `msgformat="<DAQPRJ> ... </DAQPRJ>"`
 5. For different heating models, set `parameters` to `FULL` to check out which parameters are sent.
 
-If you don't get a (aktual) file like described above (take a look on flie date/time): try to set the tomorrow date and 23:59 - and wait two minutes till 0:01.. Looks like some heaters only writing on midnight or something like that.
+If you don't get a (aktual) file like described above (take a look on file date/time): try to set the tomorrow date and 23:59 - and wait two minutes till 0:01.. Looks like some heaters only writing on midnight or something like that.
 
 ### Acknowledgements ###
 [This code](https://github.com/Jahislove/Hargassner) by @Jahislove was very helpful to understand the messages sent by the heating - thank you!
