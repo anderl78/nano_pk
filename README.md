@@ -34,14 +34,14 @@ nano_pk:
 
 
 ### How to use with other Hargassner models or different firmware versions ###
-### Or if you can't get it to work with the above way (save way) ###
+### Or if you can't get it to work with the above way (safe way) ###
 
 Apart from the provided templates for `msgformat` (see above), this configuration parameter also allows custom message formats. Follow these steps:
 1. To get the correct message format for your heating, enable SD logging on the touch screen and insert a card for a short time (a couple of seconds should be enough). 
 2. Check the card on your computer: you should find a file `DAQ00000.DAQ` or similar somewhere.
 3. Open this file in a text editor and search for an XML section `<DAQPRJ> ... </DAQPRJ>` right at the beginning.
 4. Copy the entire section and place it using quotes in your `configuration.yaml`, so that you have something like this: `msgformat="<DAQPRJ> ... </DAQPRJ>"`
-5. For different heating models, set `parameters` to `FULL` to check out which parameters are sent.
+5. For different heating models, set `parameters` to `FULL` to check out which parameters are sent. `FULL` is the recommended setting for this, `STANDARD` might not work
 
 If you don't get a (aktual) file like described above (take a look on file date/time): try to set the tomorrow date and 23:59 - and wait two minutes till 0:01.. Looks like some heaters only writing on midnight or something like that.
 
