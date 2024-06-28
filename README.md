@@ -45,6 +45,18 @@ Apart from the provided templates for `msgformat` (see above), this configuratio
 
 If you don't get a (aktual) file like described above (take a look on file date/time): try to set the tomorrow date and 23:59 - and wait two minutes till 0:01.. Looks like some heaters only writing on midnight or something like that.
 
+## Disable automatic update: ##
+
+1. Register your heater inside the hargassner-app / website
+2. Log into the app (or direktly to the website and login there)
+3. burger-menu --> click "Web-Version" (if asked, login there)
+4. click top right -->"info"-button
+5. click "Settings"
+6. disable automatic update (read the warning and choose like you want)
+done
+
+btw: Its not possibe (at least at the moment), to disable automatic updates inside the app
+
 ### Acknowledgements ###
 [This code](https://github.com/Jahislove/Hargassner) by @Jahislove was very helpful to understand the messages sent by the heating - thank you!
 
