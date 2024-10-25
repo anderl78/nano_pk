@@ -69,4 +69,5 @@ btw: Its not possibe (at least at the moment), to disable automatic updates insi
 ### Acknowledgements ###
 [This code](https://github.com/Jahislove/Hargassner) by @Jahislove was very helpful to understand the messages sent by the heating - thank you!
 [The original code](https://github.com/TheRealKillaruna/nano_pk) by @TheRealKillaruna is here forked for a few changes - thank you for your work!
+
 This fork is primary for my own use....
