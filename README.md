@@ -46,7 +46,7 @@ Apart from the provided templates for `msgformat` (see above), this configuratio
 4. Copy the entire section and place it using quotes in your `configuration.yaml`, so that you have something like this: `msgformat="<DAQPRJ> ... </DAQPRJ>"`
 5. For different heating models, set `parameters` to `FULL` to check out which parameters are sent.
 6. if its not working out of the box:
-   - log into the logs of HA
+   - look into the logs of HA
    - set up a input_boolean.length_check_enabled in HA an disable the lengthcheck temorary to fix this on your own (be aware: not all sensors must be correct!), set up in configuration.yaml:
 ```
   input_boolean:
